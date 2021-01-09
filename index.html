@@ -234,38 +234,23 @@
           <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
         </header>
         <main class="modal__content" id="modal-1-content">
-          <form class="present" enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')">
-            <!-- &lt;!&ndash; Hidden Required Fields &ndash;&gt; -->
-<!--             <input type="hidden" name="project_name" value="Site Name">
-            <input type="hidden" name="admin_email" value="4ekiston@gmail.com">
-            <input type="hidden" name="form_subject" value="Заявка"> -->
-            <!-- &lt;!&ndash; END Hidden Required Fields &ndash;&gt; -->
-<!--             <input type="hidden" name="страница" value=""> -->
+          <form
+  action="https://formspree.io/f/mvovdqwn"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="text" name="_replyto">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
 
-            <!-- <div class="formhead h3">Оставить заявку</div> -->
-            <p class="present_text">Оставьте заявку и мы вышлем вам подарок.</p>
+  <!-- your other form fields go here -->
 
-            <input type="text" name="Name" placeholder="Ваше имя..." required>
-            <input type="email" name="Email" placeholder="Ваш e-mail..." required>
-            <select name="Услуга" required>
-              <option value disabled selected>Выбрать подарок</option>
-              <option>Чек-лист</option>
-              <option>Медитация</option>
-              <option>Вебинар</option>
-            </select>
-            <!-- <button class="button">Отправить</button> -->
-
-            <div class="button-wrapp">
-              <button class="button" type="submit">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Отправить
-              </button>
-            </div>
-
-          </form>
+  <button type="submit">Send</button>
+</form>
         </main>
       </div>
     </div>
