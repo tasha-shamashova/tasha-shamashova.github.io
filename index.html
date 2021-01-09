@@ -237,15 +237,16 @@
           <form
   action="https://formspree.io/f/mvovdqwn"
   method="POST"
+		class="present"
 >
-  <label>
-    Your email:
-    <input type="text" name="_replyto">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
+		 <input type="text" name="Name" placeholder="Ваше имя..." required>
+            <input type="email" name="_replyto" placeholder="Ваш e-mail..." required>
+            <select name="Услуга" required>
+              <option value disabled selected>Выбрать подарок</option>
+              <option>Чек-лист</option>
+              <option>Медитация</option>
+              <option>Вебинар</option>
+            </select>
 
   <!-- your other form fields go here -->
 
