@@ -27,7 +27,7 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'tasha.shamashova'; // Логин на почте
+    $mail->Username   = 'tasha.shamashova@gmail.com'; // Логин на почте
     $mail->Password   = 'Artem4_5iraM'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
@@ -37,18 +37,18 @@ try {
     $mail->addAddress('4ekiston@gmail.com');
 
     // Прикрипление файлов к письму
-if (!empty($file['name'][0])) {
-    for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
-        $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
-        $filename = $file['name'][$ct];
-        if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
-            $mail->addAttachment($uploadfile, $filename);
-            $rfile[] = "Файл $filename прикреплён";
-        } else {
-            $rfile[] = "Не удалось прикрепить файл $filename";
-        }
-    }   
-}
+// if (!empty($file['name'][0])) {
+//     for ($ct = 0; $ct < count($file['tmp_name']); $ct++) {
+//         $uploadfile = tempnam(sys_get_temp_dir(), sha1($file['name'][$ct]));
+//         $filename = $file['name'][$ct];
+//         if (move_uploaded_file($file['tmp_name'][$ct], $uploadfile)) {
+//             $mail->addAttachment($uploadfile, $filename);
+//             $rfile[] = "Файл $filename прикреплён";
+//         } else {
+//             $rfile[] = "Не удалось прикрепить файл $filename";
+//         }
+//     }   
+// }
 // Отправка сообщения
 $mail->isHTML(true);
 $mail->Subject = $title;
