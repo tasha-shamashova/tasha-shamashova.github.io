@@ -25,7 +25,7 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    //$mail->SMTPDebug = 2;
+    $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
@@ -37,7 +37,7 @@ try {
     $mail->setFrom('alex.shamashov@gmail.com', 'С сайта'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('alex.shamashov@gmail.com');  
+    $mail->addAddress('tatiana.shamashova@gmail.com');  
     // $mail->addAddress('youremail@gmail.com'); // Ещё один, если нужен
 
 // Отправка сообщения
